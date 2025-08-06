@@ -7,6 +7,7 @@ import LockerPage from "./pages/LockerPage";
 import QRPage from "./pages/QRPage";
 import MyPage from "./pages/MyPage";
 import MainPage from "./pages/MainPage";
+import FindPage from "./pages/FindPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/qr/:lockerId" element={<QRPage />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/main" element={<MainPage />} />
+        <Route path="/find" element={<FindPage />} />
       </Routes>
     </Router>
   );

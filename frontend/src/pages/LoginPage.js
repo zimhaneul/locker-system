@@ -88,19 +88,52 @@ export default function LoginPage() {
         </button>
 
         {/* 아이디/비번 찾기 */}
-        <div style={{ textAlign: "center", color: "#4F525B", fontFamily: "Inter", fontSize: 16, fontWeight: 600 }}>
+        <div style={{ 
+          textAlign: "center",
+          color: "#4F525B",
+          fontFamily: "Inter",
+          fontSize: 16,
+          fontWeight: 600,
+          cursor: "pointer"
+          }}
+          // onClick={() => navigate("/find")}
+          onClick={() => alert("아직 구현되지 않았습니다.")}
+          >
           아이디/비밀번호 찾기
         </div>
 
         {/* 소셜 로그인 버튼들 */}
         {[
-          { text: "카카오 로그인", icon: kakaoLogo, bg: "#FEE500", color: "#000" },
-          { text: "네이버 로그인", icon: naverLogo, bg: "#03C75A", color: "#fff" },
-          { text: "구글 로그인", icon: googleLogo, bg: "#4285F4", color: "#fff" },
+          { 
+            text: "카카오 로그인", 
+            icon: kakaoLogo, 
+            bg: "#FEE500", 
+            color: "#000"
+            // 로그인 API 링크
+            // url: "https://kauth.kakao.com/oauth/authorize?client_id=YOUR_KAKAO_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code"
+          },
+          { 
+            text: "네이버 로그인", 
+            icon: naverLogo, 
+            bg: "#03C75A", 
+            color: "#fff"
+            // 로그인 API 링크               
+            // url: "https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=YOUR_NAVER_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&state=RANDOM_STATE"
+          },
+          { 
+            text: "구글 로그인", 
+            icon: googleLogo, 
+            bg: "#4285F4", 
+            color: "#fff"
+            // 로그인 API 링크
+            // // url: "https://accounts.google.com/o/oauth2/v2/auth?client_id=YOUR_GOOGLE_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=profile email"
+          },
         ].map((btn, i) => (
           <button
             key={i}
             type="button"
+            onClick={() => alert("아직 구현되지 않았습니다.")}
+            // onClick={() => window.location.href = btn.url}
             style={{
               display: "flex",
               alignItems: "center",
