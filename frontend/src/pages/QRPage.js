@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { generateQR } from "../api/api";
+import { generateQR } from "../api";
 import { QRCodeSVG } from "qrcode.react";
 import { useParams } from "react-router-dom";
 

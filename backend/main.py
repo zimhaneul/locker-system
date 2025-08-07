@@ -29,10 +29,11 @@ qr_codes = {}      # code: locker_id
 
 class UserRegister(BaseModel):
     username: str
+    useremail: str
     password: str
 
 class UserLogin(BaseModel):
-    username: str
+    useremail: str
     password: str
 
 class LockerReserveRequest(BaseModel):
@@ -44,17 +45,21 @@ class QRCodeRequest(BaseModel):
 # --- 회원가입 ---
 @app.post("/auth/register")
 def register(user: UserRegister):
-    if user.username in users:
+    if user.useremail in users:
         raise HTTPException(status_code=400, detail="이미 존재하는 사용자입니다.")
-    users[user.username] = {"password": user.password, "id": len(users) + 1}
+    users[user.useremail] = {
+        "username": user.username,
+        "password": user.password, 
+        "id": len(users) + 1
+    }
     return {"message": "회원가입 성공"}
 
 # --- 로그인 ---
 @app.post("/auth/login")
 def login(user: UserLogin):
-    if user.username not in users or users[user.username]["password"] != user.password:
-        raise HTTPException(status_code=400, detail="아이디 또는 비밀번호가 틀렸습니다.")
-    user_id = users[user.username]["id"]
+    if user.useremail not in users or users[user.useremail]["password"] != user.password:
+        raise HTTPException(status_code=400, detail="이메일 또는 비밀번호가 틀렸습니다.")
+    user_id = users[user.useremail]["id"]
     return {"user_id": user_id}
 
 # --- 보관함 예약 ---

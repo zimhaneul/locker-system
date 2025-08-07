@@ -1,5 +1,5 @@
 import React from "react";
-import { reserveLocker } from "../api/api";
+import { reserveLocker } from "../api";
 import { useNavigate } from "react-router-dom";
 
 export default function LockerPage() {

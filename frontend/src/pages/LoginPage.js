@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { login } from "../api/api";
+import { login } from "../api";
 import { useNavigate } from "react-router-dom";
 import naverLogo from "../img/naver_logo.png";
 import kakaoLogo from "../img/kakao_logo.png";
