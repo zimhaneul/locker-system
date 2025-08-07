@@ -22,6 +22,22 @@ export default function LoginPage() {
   };
 
   return (
+<div style={{
+  minHeight: "100vh",
+  background: "white",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: 16
+}}>
+  <div style={{
+    width: "100%",
+    maxWidth: 400,
+    display: "flex",
+    flexDirection: "column",
+    gap: 20
+  }}>
+
     <div style={{ minHeight: "100vh", background: "white", display: "flex", justifyContent: "center", alignItems: "center", padding: 16 }}>
       <form onSubmit={handleLogin} style={{ width: "100%", maxWidth: 400, display: "flex", flexDirection: "column", gap: 20 }}>
         {/* 타이틀 */}
@@ -155,5 +171,8 @@ export default function LoginPage() {
         ))}
       </form>
     </div>
-  );
+  
+  </div>
+</div>
+);
 }

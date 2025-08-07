@@ -13,6 +13,22 @@ export default function LockerPage() {
   };
 
   return (
+<div style={{
+  minHeight: "100vh",
+  background: "white",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: 16
+}}>
+  <div style={{
+    width: "100%",
+    maxWidth: 400,
+    display: "flex",
+    flexDirection: "column",
+    gap: 20
+  }}>
+
     <div>
       <h2>보관함 예약</h2>
       {[1, 2, 3, 4].map((id) => (
@@ -21,5 +37,8 @@ export default function LockerPage() {
         </button>
       ))}
     </div>
-  );
+  
+  </div>
+</div>
+);
 }

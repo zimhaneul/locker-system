@@ -18,6 +18,22 @@ export default function RegisterPage() {
   };
 
   return (
+<div style={{
+  minHeight: "100vh",
+  background: "white",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: 16
+}}>
+  <div style={{
+    width: "100%",
+    maxWidth: 400,
+    display: "flex",
+    flexDirection: "column",
+    gap: 20
+  }}>
+
     <div
       style={{
         minHeight: "100vh",
@@ -134,5 +150,8 @@ export default function RegisterPage() {
         </div>
       </form>
     </div>
-  );
+  
+  </div>
+</div>
+);
 }
